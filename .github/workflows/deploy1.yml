@@ -2,13 +2,13 @@ name: Java CI
 
 on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: maven:3.6.3-jdk-8
 
     steps:
     - uses: actions/checkout@v1
