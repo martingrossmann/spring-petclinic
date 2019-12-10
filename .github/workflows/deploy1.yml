@@ -43,8 +43,8 @@ jobs:
     - name: Run unit tests
       run: mvn test
 
-#    - name: Archive test results
-#      uses: actions/upload-artifact@v1
-#      with:
-#        name: unit-tests
-#        path: target/surefire-reports/*.**
+    - name: Archive test results
+      uses: actions/upload-artifact@v1
+      with:
+        name: unit-tests
+        path: ${{ github.workspace }}/target/surefire-reports/*.**
