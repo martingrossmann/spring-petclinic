@@ -43,6 +43,9 @@ jobs:
     - name: Run unit tests
       run: mvn test
 
+    - name: List workspace
+      run: ls -la
+
     - name: Archive test results
       uses: actions/upload-artifact@v1
       with:
