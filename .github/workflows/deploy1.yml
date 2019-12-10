@@ -1,4 +1,4 @@
-name: Java CI
+name: PetClinic POC
 
 on:
   repository_dispatch:
@@ -9,11 +9,14 @@ on:
 jobs:
   build:
 
+    # Installed software
+    # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/software-installed-on-github-hosted-runners#ubuntu-1804-lts
     runs-on: ubuntu-18.04
 
     steps:
     - name: Checkout sources
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2-beta
+        path: ''
 
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
